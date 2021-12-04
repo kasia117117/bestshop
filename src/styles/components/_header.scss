@@ -1,47 +1,126 @@
-
-header{
-  width:100%;
+.header {
   height: 70px;
-  box-shadow: 0 3px 6px #00000029;
-  position: sticky;
-  top:0;
-  background-color:white;
-  margin-bottom: 130px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+ //hamburger menu
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav {
+    &__element {
+      padding: 0 26px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+      color: $color-grey;
+      font-weight: 700;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      padding: 28px 18px 22px;
+      border-bottom: 4px solid transparent;
+      letter-spacing: 0.1875rem;
+      text-decoration:none;
+
+      &:hover {
+        color: black;
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+
+    @include mobile {
+      position: absolute;
+      left: 0;
+      top: 95px;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      padding-bottom: 20px;
+      display: none;
+
+      .nav__element {
+        padding: 0;
+      }
+
+      .nav__link {
+        display: block;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .menu {
+    &__btn {
+      display: none;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      opacity: 0;
+
+      @include mobile {
+        &:checked {
+          ~ .header__nav {
+            display: flex;
+          }
+
+          ~ .menu__toggle {
+            span {
+              &:nth-child(1) {
+                transform: rotate(45deg) translate(2px, 5px);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                transform: rotate(-45deg) translate(2px, -5px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__toggle {
+      display: none;
+
+      span {
+        width: 20px;
+        height: 2px;
+        display: block;
+        margin-bottom: 3px;
+        background-color: $color-primary;
+        transition: .3s all ease-in-out;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+  //stylowanie menu
+  .logo {
+    color: $color-primary;
+    font-size:2em;
+    font-family: "Raleway" , sans-serif;
+    text-decoration:none;
+    font-weight:300;
+
+  }
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.logo {
-  color: $color-primary;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-}
-
-.menu-list{
-  display:flex;
-  align-items: center;
-  height:70px;
-}
-
-.menu-element {
-  padding-left: 95px;
-  position: relative;
-  text-decoration: none;
-  color: $color-grey;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 3.28px;
-}
-
-.menu-element:hover {
-  color: black;
-  cursor: pointer;
-  transition: 0.4s linear;
-}
