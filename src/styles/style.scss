@@ -1,0 +1,12 @@
+//importing variables ex. $logo-background-color
+@import "variables";
+// importing mixins
+@import "mixins";
+// adding reset
+@import "reset";
+//congiguring layout
+@import "grid";
+// instaling fonts
+@import "fonts";
+//file with imported conponents (header,base(body) itd
+@import "src/styles/custom";

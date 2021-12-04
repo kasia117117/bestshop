@@ -1,0 +1,158 @@
+.first-benefit {
+  display:flex;
+  justify-content: space-between;
+  max-width: 1124px;
+  margin: 0 auto;
+  .text-content__first {
+    .first-benefit__title {
+      font-family:"Raleway", sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .first-benefit__text {
+      text-align: left;
+      font-family:"Open Sans", sans-serif;
+      font-size:16px;
+      font-weight: 400;
+      color:black;
+      max-width: 420px;
+      line-height: 30px;
+    }
+
+    .first-benefit__text span {
+      width:330px;
+      height:5px;
+      background-color:$color-redish;
+      display:inline-block;
+      margin-top:30px;
+    }
+  }
+  .photo-content__first {
+    .photo-bg__first {
+      width:200px;
+      height:200px;
+      background-color: $color-redish;
+      display: inline-block;
+      transform: rotate(45deg);
+      border-radius:41px;
+      position: absolute;
+
+    }
+
+    .photo-first {
+      width: 390px;
+      height: auto;
+      margin-left: -14em;
+      margin-top: 72px;
+      position: relative;
+      //z-index: 2;
+
+    }
+  }
+}
+
+
+
+
+
+.second-benefit {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1124px;
+  margin-top: 150px;
+}
+
+.photo-second {
+  width: 400px;
+  height:auto;
+  position: absolute;
+  z-index: 2;
+  margin-top: 27px;
+  margin-left: 16px;
+}
+
+.photo-bg__second {
+  width: 320px;
+  height: 320px;
+  background-color: $color-primary;
+  border-radius:50%;
+}
+
+.second-benefit__title {
+  font-family:"Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.second-benefit__text {
+  text-align: left;
+  font-family:"Open Sans", sans-serif;
+  font-size:16px;
+  font-weight: 400;
+  color:black;
+  max-width: 420px;
+  line-height: 30px;
+}
+
+.second-benefit__text span {
+  width:330px;
+  height:5px;
+  background-color:$color-primary;
+  display:inline-block;
+  margin-top:30px;
+}
+
+.text-content__second {
+  margin-right: -60px;
+}
+
+.third-benefit {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1124px;
+  margin: 150px auto;
+}
+
+.third-benefit__title {
+  font-family:"Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.third-benefit__text {
+  text-align: left;
+  font-family:"Open Sans", sans-serif;
+  font-size:16px;
+  font-weight: 400;
+  color:black;
+  max-width: 420px;
+  line-height: 30px;
+}
+
+.third-benefit__text span {
+  width:330px;
+  height:5px;
+  background-color:$color-green;
+  display:inline-block;
+  margin-top:30px;
+}
+
+.photo-third {
+  width:300px;
+  height:auto;
+  position: absolute;
+  z-index: 2;
+  margin-top: 103px;
+  margin-left: 67px;
+}
+
+.photo-bg__third {
+  width: 440px;
+  height:370px;
+  background-color: $color-green;
+}
