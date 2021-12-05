@@ -1,158 +1,228 @@
-.first-benefit {
-  display:flex;
-  justify-content: space-between;
-  max-width: 1124px;
-  margin: 0 auto;
-  .text-content__first {
-    .first-benefit__title {
-      font-family:"Raleway", sans-serif;
-      font-size: 36px;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
+.benefits {
+  margin-top: 20em;
+  @include tablet {
+    margin-top:5em;
+  }
+  .benefit__notebook {
 
-    .first-benefit__text {
-      text-align: left;
-      font-family:"Open Sans", sans-serif;
-      font-size:16px;
-      font-weight: 400;
-      color:black;
-      max-width: 420px;
-      line-height: 30px;
-    }
+    .notebook__photo {
+        @include tablet {
+          display:flex;
+          flex-direction:row-reverse;
+        }
+      .notebook__pic {
+        width:192px;
+        height:109px;
+        position: relative;
+        bottom:6em;
+        left:5em;
+        @include tablet {
+          width:35%;
+          height:35%;
+          bottom:6em;
+          left:1.5em;
+        }
 
-    .first-benefit__text span {
-      width:330px;
-      height:5px;
-      background-color:$color-redish;
-      display:inline-block;
-      margin-top:30px;
+      }
+      .notebook__background {
+        width:6em;
+        height:6em;
+        background-color:$color-redish;
+        border-radius:19px;
+        transform:rotate(45deg);
+        position: relative;
+        bottom:1.5em;
+        left:11.5em;
+        @include tablet {
+          bottom:7.5em;
+          left:-4.5em;
+        }
+      }
+    }
+    .notebook__text {
+        margin-top:-1.5em;
+        margin-left:1em;
+      @include tablet {
+        margin-left:2.5em;
+      }
+
+      .notebook__title {
+        text-align:left;
+        font-size:2em;
+        font-weight: 400;
+        margin-bottom:1em;
+        @include tablet{
+          margin-top:-8em;
+
+        }
+      }
+
+      .notebook__description {
+        text-align:left;
+        font-family: $font-open-sans;
+        font-size:0.9em;
+        line-height:1.5em;
+        @include tablet{
+          max-width:20em;
+        }
+      }
+        .notebook__widget {
+
+          @include tablet {
+            border-bottom: 4px solid $color-redish;
+            width:15em;
+            margin-top:2em;
+
+          }
+        }
+
     }
   }
-  .photo-content__first {
-    .photo-bg__first {
-      width:200px;
-      height:200px;
-      background-color: $color-redish;
-      display: inline-block;
-      transform: rotate(45deg);
-      border-radius:41px;
-      position: absolute;
-
+  .benefit__phone {
+      margin-top:-2em;
+    @include tablet{
+      margin-top:2em;
+      display:flex;
+      align-items:center;
     }
+    .phone__photo {
+      .phone__pic {
+        width:175px;
+        height:135px;
+        position: relative;
+        bottom:3em;
+        left:5.5em;
+        @include tablet {
+          width:240px;
+          height:185px;
+          bottom:5em;
+          left:4em;
+        }
 
-    .photo-first {
-      width: 390px;
-      height: auto;
-      margin-left: -14em;
-      margin-top: 72px;
-      position: relative;
-      //z-index: 2;
-
+      }
+      .phone__background {
+        width:145px;
+        height:145px;
+        background-color:$color-primary;
+        border-radius:50%;
+        transform:rotate(45deg);
+        position: relative;
+        top:5em;
+        left:5em;
+        @include tablet {
+          width:190px;
+          height:190px;
+          top:6em;
+          left:4em;
+        }
+      }
+    }
+    .phone__text {
+        margin-top:-1.5em;
+        margin-left:1em;
+      .phone__title {
+        text-align:left;
+        font-size:2em;
+        font-weight: 400;
+        margin:1em 0;
+        max-width:250px;
+        @include tablet {
+          margin-left:5.3em;
+        }
+      }
+      .phone__description {
+        text-align:left;
+        font-family: $font-open-sans;
+        font-size:0.9em;
+        line-height:1.5em;
+        @include tablet {
+          margin-left:12em;
+          max-width:280px;
+          }
+        }
+      .phone__widget {
+        @include tablet {
+          border-bottom: 4px solid $color-primary;
+          width:15em;
+          margin-top:2em;
+          margin-left:10.9em;
+        }
+      }
     }
   }
-}
+  .benefit__trumpet {
+      margin-top:4em;
+    @include tablet {
+      display:flex;
+      justify-content:space-between;
+      margin-top:1em;
+    }
+    .trumpet__photo {
 
+      .trumpet__pic {
+        width:295px;
+        height:207px;
+        position: relative;
+        bottom:9em;
+        left:1em;
+        @include tablet {
+          bottom:7em;
+          left:-2em;
+        }
 
+      }
+      .trumpet__background {
+        width:314px;
+        height:195px;
+        background-color:$color-green;
+        position: relative;
+        top:1em;
+        left:1em;
+        border-radius:5px;
+        @include tablet {
+          left:-2em;
+          height:240px;
+          top:3.5em;
+        }
+      }
+    }
+    .trumpet__text {
+        margin-top:5em;
+        margin-left:1em;
+      @include tablet {
+        margin-top:1em;
+        margin-left:1em;
+      }
+      .trumpet__title {
+        text-align:left;
+        font-size:2em;
+        font-weight: 400;
+        margin:1em 0;
+        max-width:270px;
+        @include tablet {
+          max-width:350px;
+          margin-left:0.5em;
+        }
+      }
 
-
-
-.second-benefit {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1124px;
-  margin-top: 150px;
-}
-
-.photo-second {
-  width: 400px;
-  height:auto;
-  position: absolute;
-  z-index: 2;
-  margin-top: 27px;
-  margin-left: 16px;
-}
-
-.photo-bg__second {
-  width: 320px;
-  height: 320px;
-  background-color: $color-primary;
-  border-radius:50%;
-}
-
-.second-benefit__title {
-  font-family:"Raleway", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
-
-.second-benefit__text {
-  text-align: left;
-  font-family:"Open Sans", sans-serif;
-  font-size:16px;
-  font-weight: 400;
-  color:black;
-  max-width: 420px;
-  line-height: 30px;
-}
-
-.second-benefit__text span {
-  width:330px;
-  height:5px;
-  background-color:$color-primary;
-  display:inline-block;
-  margin-top:30px;
-}
-
-.text-content__second {
-  margin-right: -60px;
-}
-
-.third-benefit {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1124px;
-  margin: 150px auto;
-}
-
-.third-benefit__title {
-  font-family:"Raleway", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
-.third-benefit__text {
-  text-align: left;
-  font-family:"Open Sans", sans-serif;
-  font-size:16px;
-  font-weight: 400;
-  color:black;
-  max-width: 420px;
-  line-height: 30px;
-}
-
-.third-benefit__text span {
-  width:330px;
-  height:5px;
-  background-color:$color-green;
-  display:inline-block;
-  margin-top:30px;
-}
-
-.photo-third {
-  width:300px;
-  height:auto;
-  position: absolute;
-  z-index: 2;
-  margin-top: 103px;
-  margin-left: 67px;
-}
-
-.photo-bg__third {
-  width: 440px;
-  height:370px;
-  background-color: $color-green;
+      .trumpet__description {
+        text-align:left;
+        font-family: $font-open-sans;
+        font-size:0.9em;
+        line-height:1.5em;
+        @include tablet {
+          max-width:270px;
+          margin-left:1em;
+        }
+      }
+      .trumpet__widget {
+        @include tablet {
+          border-bottom: 4px solid $color-green;
+          width:15em;
+          margin-top:2em;
+          margin-left:1em;
+        }
+      }
+    }
+  }
 }
