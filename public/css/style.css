@@ -470,10 +470,18 @@ body {
 }
 @media (min-width: 768px) {
   .benefits .benefit__notebook .notebook__photo .notebook__pic {
-    width: 35%;
-    height: 35%;
+    width: 260px;
+    height: 147px;
     bottom: 6em;
     left: 1.5em;
+  }
+}
+@media (min-width: 1352px) {
+  .benefits .benefit__notebook .notebook__photo .notebook__pic {
+    width: 340px;
+    height: 192px;
+    bottom: 3em;
+    left: 7em;
   }
 }
 .benefits .benefit__notebook .notebook__photo .notebook__background {
@@ -490,6 +498,15 @@ body {
   .benefits .benefit__notebook .notebook__photo .notebook__background {
     bottom: 7.5em;
     left: -4.5em;
+  }
+}
+@media (min-width: 1352px) {
+  .benefits .benefit__notebook .notebook__photo .notebook__background {
+    bottom: 5em;
+    left: -1em;
+    width: 10em;
+    height: 10em;
+    border-radius: 28px;
   }
 }
 .benefits .benefit__notebook .notebook__text {
@@ -523,6 +540,11 @@ body {
     max-width: 20em;
   }
 }
+@media (min-width: 1352px) {
+  .benefits .benefit__notebook .notebook__text .notebook__description {
+    max-width: 400px;
+  }
+}
 @media (min-width: 768px) {
   .benefits .benefit__notebook .notebook__text .notebook__widget {
     border-bottom: 4px solid #FB3B64;
@@ -538,6 +560,7 @@ body {
     margin-top: 2em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 .benefits .benefit__phone .phone__photo .phone__pic {
@@ -553,6 +576,14 @@ body {
     height: 185px;
     bottom: 5em;
     left: 4em;
+  }
+}
+@media (min-width: 1352px) {
+  .benefits .benefit__phone .phone__photo .phone__pic {
+    width: 340px;
+    height: 261px;
+    bottom: 7em;
+    left: 3em;
   }
 }
 .benefits .benefit__phone .phone__photo .phone__background {
@@ -573,6 +604,14 @@ body {
     left: 4em;
   }
 }
+@media (min-width: 1352px) {
+  .benefits .benefit__phone .phone__photo .phone__background {
+    width: 260px;
+    height: 260px;
+    top: 8em;
+    left: 3em;
+  }
+}
 .benefits .benefit__phone .phone__text {
   margin-top: -1.5em;
   margin-left: 1em;
@@ -589,6 +628,12 @@ body {
     margin-left: 5.3em;
   }
 }
+@media (min-width: 1352px) {
+  .benefits .benefit__phone .phone__text .phone__title {
+    max-width: 230px;
+    margin-left: 3em;
+  }
+}
 .benefits .benefit__phone .phone__text .phone__description {
   text-align: left;
   font-family: "Open Sans", sans-serif;
@@ -601,12 +646,23 @@ body {
     max-width: 280px;
   }
 }
+@media (min-width: 1352px) {
+  .benefits .benefit__phone .phone__text .phone__description {
+    margin-left: 7em;
+    max-width: 350px;
+  }
+}
 @media (min-width: 768px) {
   .benefits .benefit__phone .phone__text .phone__widget {
     border-bottom: 4px solid #08A6E4;
     width: 15em;
     margin-top: 2em;
     margin-left: 10.9em;
+  }
+}
+@media (min-width: 1352px) {
+  .benefits .benefit__phone .phone__text .phone__widget {
+    margin-left: 6.3em;
   }
 }
 .benefits .benefit__trumpet {
@@ -632,6 +688,14 @@ body {
     left: -2em;
   }
 }
+@media (min-width: 1352px) {
+  .benefits .benefit__trumpet .trumpet__photo .trumpet__pic {
+    width: 296px;
+    height: 208px;
+    top: -16.5em;
+    left: 7em;
+  }
+}
 .benefits .benefit__trumpet .trumpet__photo .trumpet__background {
   width: 314px;
   height: 195px;
@@ -646,6 +710,14 @@ body {
     left: -2em;
     height: 240px;
     top: 3.5em;
+  }
+}
+@media (min-width: 1352px) {
+  .benefits .benefit__trumpet .trumpet__photo .trumpet__background {
+    width: 440px;
+    height: 370px;
+    top: -1em;
+    left: 4em;
   }
 }
 .benefits .benefit__trumpet .trumpet__text {
@@ -680,6 +752,12 @@ body {
 @media (min-width: 768px) {
   .benefits .benefit__trumpet .trumpet__text .trumpet__description {
     max-width: 270px;
+    margin-left: 1em;
+  }
+}
+@media (min-width: 1352px) {
+  .benefits .benefit__trumpet .trumpet__text .trumpet__description {
+    max-width: 450px;
     margin-left: 1em;
   }
 }

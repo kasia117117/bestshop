@@ -17,12 +17,17 @@
         bottom:6em;
         left:5em;
         @include tablet {
-          width:35%;
-          height:35%;
+          width:260px;
+          height:147px;
           bottom:6em;
           left:1.5em;
         }
-
+        @include desktop {
+          width:340px;
+          height:192px;
+          bottom:3em;
+          left:7em;
+        }
       }
       .notebook__background {
         width:6em;
@@ -36,6 +41,13 @@
         @include tablet {
           bottom:7.5em;
           left:-4.5em;
+        }
+        @include desktop {
+          bottom:5em;
+          left:-1em;
+          width:10em;
+          height:10em;
+          border-radius:28px;
         }
       }
     }
@@ -65,6 +77,9 @@
         @include tablet{
           max-width:20em;
         }
+        @include desktop{
+          max-width:400px;
+        }
       }
         .notebook__widget {
 
@@ -84,6 +99,7 @@
       margin-top:2em;
       display:flex;
       align-items:center;
+      justify-content: space-between;
     }
     .phone__photo {
       .phone__pic {
@@ -97,6 +113,12 @@
           height:185px;
           bottom:5em;
           left:4em;
+        }
+        @include desktop {
+          width:340px;
+          height:261px;
+          bottom:7em;
+          left:3em;
         }
 
       }
@@ -115,6 +137,12 @@
           top:6em;
           left:4em;
         }
+        @include desktop {
+          width:260px;
+          height:260px;
+          top:8em;
+          left:3em;
+        }
       }
     }
     .phone__text {
@@ -129,6 +157,10 @@
         @include tablet {
           margin-left:5.3em;
         }
+        @include desktop {
+          max-width:230px;
+          margin-left:3em;
+        }
       }
       .phone__description {
         text-align:left;
@@ -139,6 +171,10 @@
           margin-left:12em;
           max-width:280px;
           }
+        @include desktop {
+          margin-left:7em;
+          max-width:350px;
+        }
         }
       .phone__widget {
         @include tablet {
@@ -146,6 +182,9 @@
           width:15em;
           margin-top:2em;
           margin-left:10.9em;
+        }
+        @include desktop {
+          margin-left:6.3em;
         }
       }
     }
@@ -169,6 +208,12 @@
           bottom:7em;
           left:-2em;
         }
+        @include desktop {
+          width:296px;
+          height:208px;
+          top:-16.5em;
+          left:7em;
+        }
 
       }
       .trumpet__background {
@@ -184,7 +229,14 @@
           height:240px;
           top:3.5em;
         }
+        @include desktop {
+          width:440px;
+          height:370px;
+          top:-1em;
+          left:4em;
+        }
       }
+
     }
     .trumpet__text {
         margin-top:5em;
@@ -212,6 +264,10 @@
         line-height:1.5em;
         @include tablet {
           max-width:270px;
+          margin-left:1em;
+        }
+        @include desktop {
+          max-width:450px;
           margin-left:1em;
         }
       }
