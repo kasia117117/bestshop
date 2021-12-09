@@ -773,6 +773,12 @@ body {
 .pricing {
   margin-top: -10em;
 }
+@media (min-width: 768px) {
+  .pricing {
+    margin-top: 1em;
+    transform: scale(1.1);
+  }
+}
 .pricing .pricing__title {
   font-size: 2.2em;
   font-weight: 400;
@@ -784,34 +790,168 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .pricing .pricing__plans {
+    margin-top: 5em;
+    transform: scale(1.1);
+  }
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .pricing .pricing__plans .plan__basic {
   border: 1px solid #FB3B64;
   width: 293px;
   height: 251px;
   border-radius: 18px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 0.6em;
+  padding-left: 1.5em;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__basic {
+    width: 340px;
+    height: 421px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
 }
 .pricing .pricing__plans .plan__basic .basic__title_price {
   text-align: center;
-  margin-left: 2em;
+  margin-right: 1em;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__basic .basic__title_price {
+    margin-bottom: 3em;
+  }
 }
 .pricing .pricing__plans .plan__basic .basic__title_price .basic__title {
   font-size: 1.3em;
   font-weight: 700;
 }
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__basic .basic__title_price .basic__title {
+    margin-bottom: 1.5em;
+  }
+}
 .pricing .pricing__plans .plan__basic .basic__title_price .basic__price {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
   color: #FB3B64;
+  margin-top: 0.2em;
 }
-.pricing .pricing__plans .plan__basic .pricing__elements .pricing__single {
+.pricing .pricing__plans .plan__professional {
+  border: 1px solid #08A6E4;
+  width: 339px;
+  height: 277px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.5em;
+  padding-right: 2.4em;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__professional {
+    width: 373px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+}
+.pricing .pricing__plans .plan__professional .prof__title_price {
+  text-align: center;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__professional .prof__title_price {
+    margin-bottom: 3em;
+  }
+}
+.pricing .pricing__plans .plan__professional .prof__title_price .prof__title {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__professional .prof__title_price .prof__title {
+    margin-bottom: 1.5em;
+  }
+}
+.pricing .pricing__plans .plan__professional .prof__title_price .prof__price {
+  font-size: 3em;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #08A6E4;
+  margin-top: 0.2em;
+}
+.pricing .pricing__plans .plan__premium {
+  border: 1px solid #55DFB4;
+  width: 293px;
+  height: 251px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.6em;
+  padding-left: 1.5em;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__premium {
+    width: 340px;
+    height: 421px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+}
+.pricing .pricing__plans .plan__premium .premium__title_price {
+  text-align: center;
+  margin-right: 0.5em;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__premium .premium__title_price {
+    margin-bottom: 3em;
+  }
+}
+.pricing .pricing__plans .plan__premium .premium__title_price .premium__title {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+@media (min-width: 1352px) {
+  .pricing .pricing__plans .plan__premium .premium__title_price .premium__title {
+    margin-bottom: 1.5em;
+  }
+}
+.pricing .pricing__plans .plan__premium .premium__title_price .premium__price {
+  font-size: 3em;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #55DFB4;
+  margin-top: 0.2em;
+}
+.pricing .pricing__elements {
+  margin-left: 1em;
+}
+.pricing .pricing__elements .pricing__single {
   margin-bottom: 1.5em;
   font-size: 0.9em;
 }
-.pricing .pricing__plans .plan__basic .pricing__elements .pricing__single::before {
+.pricing .pricing__elements .pricing__single::before {
   content: "";
   background-image: url(/assets/Ckechmark-1.svg);
   width: 11px;
@@ -819,13 +959,18 @@ body {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
-.pricing .pricing__plans .plan__basic .pricing__elements .pricing__single-not::before {
+.pricing .pricing__elements .pricing__single-not::before {
   content: "";
   background-image: url(/assets/Close.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+.pricing .limited {
+  font-size: 0.75em;
+  font-weight: 700;
+  margin-top: 0.5em;
 }
 .pricing .btn {
   color: white;
@@ -842,11 +987,35 @@ body {
   bottom: 2.5em;
   left: 5.5em;
 }
+@media (min-width: 1352px) {
+  .pricing .basic-btn {
+    bottom: 3.8em;
+    left: 9em;
+  }
+}
 .pricing .prof-btn {
   background-color: #08A6E4;
+  position: relative;
+  bottom: 2.5em;
+  left: 7.5em;
 }
-.pricing .basic-btn {
-  background-color: #FB3B64;
+@media (min-width: 1352px) {
+  .pricing .prof-btn {
+    bottom: 3.8em;
+    left: 9em;
+  }
+}
+.pricing .premium-btn {
+  background-color: #55DFB4;
+  position: relative;
+  bottom: 2.5em;
+  left: 5.5em;
+}
+@media (min-width: 1352px) {
+  .pricing .premium-btn {
+    bottom: 3.8em;
+    left: 9em;
+  }
 }
 
 .contact {

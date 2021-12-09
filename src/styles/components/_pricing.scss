@@ -1,5 +1,11 @@
 .pricing {
   margin-top:-10em;
+  @include tablet {
+    margin-top:1em;
+    transform:scale(1.1);
+  }
+  @include desktop {
+  }
   .pricing__title {
     font-size:2.2em;
     font-weight:400;
@@ -10,6 +16,16 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    @include tablet {
+      margin-top:5em;
+      transform:scale(1.1);
+    }
+    @include desktop {
+      margin-top:5em;
+      display:flex;
+      flex-direction:row;
+      justify-content:center;
+    }
 
     .plan__basic {
       border: 1px solid $color-redish;
@@ -17,49 +33,159 @@
       height:251px;
       border-radius:18px;
       display: flex;
-      justify-content: space-evenly;
+      justify-content:flex-end;
       align-items:center;
+      padding-right:0.6em;
+      padding-left:1.5em;
+      @include desktop {
+        width:340px;
+        height:421px;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        margin: 1em;
+      }
+
       .basic__title_price {
         text-align: center;
-        margin-left:2em;
+        margin-right:1em;
+        @include desktop {
+          margin-bottom:3em;
+        }
         .basic__title {
           font-size:1.3em;
           font-weight:700;
+          @include desktop {
+            margin-bottom:1.5em;
+          }
         }
         .basic__price {
-          font-size:2.5em;
+          font-size:3em;
           font-weight:300;
           font-family:$font-open-sans;
           color:$color-redish;
+          margin-top:0.2em;
         }
       }
-      .pricing__elements {
-        .pricing__single{
-          margin-bottom:1.5em;
-          font-size:0.9em;
-        }
-        .pricing__single::before {
-          content:"";
-          background-image: url(/assets/Ckechmark-1.svg);
-          width:11px;
-          height:11px;
-          display:inline-block;
-          background-position:center;
-          background-repeat: no-repeat;
-          margin: 0 1em;
+    }
 
-
+    .plan__professional {
+      border: 1px solid $color-primary;
+      width:339px;
+      height:277px;
+      border-radius:18px;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      padding-left:1.5em;
+      padding-right:2.4em;
+      @include desktop {
+        width:373px;
+        height:460px;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        margin: 1em;
+      }
+      .prof__title_price {
+        text-align: center;
+        @include desktop {
+          margin-bottom:3em;
         }
-        .pricing__single-not::before {
-          content:"";
-          background-image: url(/assets/Close.svg);
-          //color:$color-redish;
-          background-position:center;
-          background-repeat: no-repeat;
+        .prof__title {
+          font-size:1.3em;
+          font-weight:700;
+          @include desktop {
+            margin-bottom:1.5em;
+          }
+        }
+        .prof__price {
+          font-size:3em;
+          font-weight:300;
+          font-family:$font-open-sans;
+          color:$color-primary;
+          margin-top:0.2em;
         }
       }
+    }
+
+    .plan__premium {
+      border: 1px solid $color-green;
+      width:293px;
+      height:251px;
+      border-radius:18px;
+      display: flex;
+      justify-content:flex-end;
+      align-items:center;
+      padding-right:0.6em;
+      padding-left:1.5em;
+      @include desktop {
+        width:340px;
+        height:421px;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        margin: 1em;
+      }
+      .premium__title_price {
+        text-align: center;
+        margin-right:0.5em;
+        @include desktop {
+          margin-bottom:3em;
+        }
+        .premium__title {
+          font-size:1.3em;
+          font-weight:700;
+          @include desktop {
+            margin-bottom:1.5em;
+          }
+        }
+        .premium__price {
+          font-size:3em;
+          font-weight:300;
+          font-family:$font-open-sans;
+          color:$color-green;
+          margin-top:0.2em;
+        }
+      }
+    }
+
+  }
+
+  .pricing__elements {
+    margin-left:1em;
+    .pricing__single{
+      margin-bottom:1.5em;
+      font-size:0.9em;
+    }
+    .pricing__single::before {
+      content:"";
+      background-image: url(/assets/Ckechmark-1.svg);
+      width:11px;
+      height:11px;
+      display:inline-block;
+      background-position:center;
+      background-repeat: no-repeat;
+      margin: 0 0.5em;
+
 
     }
+    .pricing__single-not::before {
+      content:"";
+      background-image: url(/assets/Close.svg);
+      //color:$color-redish;
+      background-position:center;
+      background-repeat: no-repeat;
+    }
+  }
+  .limited {
+    font-size:0.75em;
+    font-weight:700;
+    margin-top:0.5em;
+
   }
   .btn{
 
@@ -77,12 +203,30 @@
     position:relative;
     bottom:2.5em;
     left:5.5em;
+    @include desktop {
+      bottom:3.8em;
+      left:9em;
+    }
   }
   .prof-btn {
     background-color:$color-primary;
+    position:relative;
+    bottom:2.5em;
+    left:7.5em;
+    @include desktop {
+      bottom:3.8em;
+      left:9em;
+    }
 
   }
-  .basic-btn {
-    background-color:$color-redish;
+  .premium-btn {
+    background-color:$color-green;
+    position:relative;
+    bottom:2.5em;
+    left:5.5em;
+    @include desktop {
+      bottom:3.8em;
+      left:9em;
+    }
   }
 }
