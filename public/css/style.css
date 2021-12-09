@@ -1259,39 +1259,36 @@ body {
   align-self: end;
 }
 
-footer {
+.footer {
   height: 89px;
   width: 100%;
   background-color: white;
-  margin-top: 60px;
+  margin-top: 3em;
   display: flex;
   justify-content: space-between;
+  padding: 0 3em;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 1em;
+  }
 }
 
-.right-footer {
-  margin-left: 140px;
-}
-
-.logo-footer {
+.right-footer .logo-footer {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 300;
   color: #08A6E4;
   margin-bottom: 7px;
 }
-
-.copyright {
+.right-footer .copyright {
   font-family: "Open Sans", sans-serif;
   color: #55DFB4;
   font-size: 11px;
   font-weight: 300;
 }
 
-.left-footer {
-  margin-right: 140px;
-}
-
-.icon-twitter {
+.left-footer .icon-twitter {
   margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */
